@@ -1,0 +1,27 @@
+<IfModule mod_rewrite.c>
+    Options -Indexes
+    RewriteEngine On
+</IfModule>
+
+<IfModule mod_rewrite.c>
+    RewriteCond %{REQUEST_URI} ^/(admin)
+    RewriteRule ^admin/assets/(.*)$ admin/assets/$1 [L]
+    RewriteRule ^admin/css/(.*)$ admin/css/$1 [L]
+    RewriteRule ^admin/js/(.*)$ admin/js/$1 [L]
+    RewriteRule ^admin/images/(.*)$ admin/images/$1 [L]
+    RewriteCond %{REQUEST_URI} !^/admin/(assets|js|css|js)/
+    RewriteCond %{REQUEST_URI} ^/(admin)
+    RewriteRule ^.*$ admin/index.php [L]
+    RewriteCond %{REQUEST_URI} ^/(assets|css|js|images|uploads)
+    RewriteRule ^uploads/(.*)$ uploads/$1 [L]
+    RewriteRule ^assets/(.*)$ store/assets/$1 [L]
+    RewriteRule ^css/(.*)$ store/css/$1 [L]
+    RewriteRule ^js/(.*)$ store/js/$1 [L]
+    RewriteRule ^images/(.*)$ store/images/$1 [L]
+    RewriteRule ^(.*)$ store/$1 [L]
+    RewriteCond %{REQUEST_URI} !^/(store|admin)/(assets|css|js|uploads)/
+    RewriteCond %{REQUEST_URI} !index.php
+    RewriteCond %{REQUEST_FILENAME} !-f [OR]
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^.*$ store/index.php
+</IfModule>
