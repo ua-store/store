@@ -1,0 +1,89 @@
+*, *:after, *:before{
+    box-sizing: border-box;
+}
+html, body{
+    height:100%;
+}
+body{
+    margin:0;
+    font-size:14px;
+    font-weight:300;
+    font-family:Poppins;
+    -ms-text-size-adjust:100%;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+}
+ul{
+    list-style:none;
+}
+a{
+    text-decoration:none;
+    color:#000;
+}
+.auth-wrapper{
+    width:100%;
+    height:100%;
+    background:url('../img/auth-bg.jpg') no-repeat;
+}
+.auth-form{
+    max-width:400px;
+    width:400px;
+    position:relative;
+    top:50%;
+    left:50%;
+    transform:perspective(1px) translateY(-50%) translateX(-50%);
+}
+.store-logo{
+    margin-bottom:10px;
+    text-align:center;
+}
+.auth-form .auth{
+    background-color:#fff;
+    border-radius:6px;
+    padding:15px;
+}
+.auth-login-form .fields .form-group:first-child .form-control{
+    border-bottom: 1px solid #ebedf2;
+}
+.auth-login-form .form-group .form-control{
+    border: 0;
+    outline:0;
+    color: #575962;
+    padding: 1rem 0;
+    margin-top: .1rem;
+    display: block;
+    width: 100%;
+    font-size: 1rem;
+    line-height: 1.25;
+    background-color: #fff;
+    background-clip: padding-box;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.actions{
+    margin: 3rem 0 1rem;
+    text-align: center;
+}
+button{
+    display: inline-block;
+    text-align: center;
+    padding: 1.2rem 3rem;
+    color:#fff;
+    -webkit-box-shadow: 0 5px 10px 2px rgba(152,22,244,.19)!important;
+    -moz-box-shadow: 0 5px 10px 2px rgba(152,22,244,.19)!important;
+    box-shadow: 0 5px 10px 2px rgba(152,22,244,.19)!important;
+    font-size: 1rem;
+    font-weight: 400;
+    -webkit-border-radius: 60px;
+    -moz-border-radius: 60px;
+    -ms-border-radius: 60px;
+    background-color: #9816f4;
+    border-color: #9816f4;
+    cursor:pointer;
+    -o-border-radius: 60px;
+    border-radius: 60px;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    line-height: 1.25;
+    vertical-align: middle;
+    -webkit-appearance: button;
+}
