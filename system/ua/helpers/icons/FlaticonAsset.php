@@ -1,5 +1,5 @@
 <?php
-namespace ua\icons\helpers;
+namespace ua\helpers\icons;
 
 use yii\web\AssetBundle;
 

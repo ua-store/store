@@ -1,5 +1,5 @@
 <?php
-namespace ua\icons\helpers;
+namespace ua\helpers\icons;
 
 use ua\helpers\Html;
 use Yii;
@@ -10,17 +10,26 @@ use Yii;
  * includes : Flaticon
  *
  * @author ReSoul <roberts.mark1985@gmail.com>
- * @ver 0.23
+ * @ver 0.41
  * @since 0.1
  */
 class BaseIcon
 {
-    static function flaticon($iconName)
+    static function flaticon($iconName, $tag = false, $options = [])
     {
         $prefix = 'flaticon';
         self::registerAsset($prefix);
 
-        return Html::tag('i', ['class' => $prefix . '-' . $iconName]);
+        if($tag){
+            $icon = Html::tag('i', '', ['class' => $prefix . '-' . $iconName]);
+            $icon = Html::tag($tag, $icon, $options);
+        }
+        else{
+            $options['class'] = $prefix . '-' . $iconName;
+            $icon = Html::tag('i', '', $options);
+        }
+
+        return $icon;
     }
 
     protected static function registerAsset($iconAsset)

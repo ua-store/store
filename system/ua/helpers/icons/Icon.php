@@ -1,5 +1,5 @@
 <?php
-namespace ua\icons\helpers;
+namespace ua\helpers\icons;
 
 /**
  * Icon class, helper for all icons

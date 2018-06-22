@@ -35,7 +35,14 @@ a{
 }
 .store-logo{
     margin-bottom:10px;
-    text-align:center;
+}
+.store-logo h1{
+    text-indent:-9999px;
+    overflow:hidden;
+    margin:0 auto;
+    width:220px;
+    height:40px;
+    background:url(../img/logo.png) no-repeat;
 }
 .auth-form .auth{
     background-color:#fff;
