@@ -14,6 +14,7 @@ $configuration = ArrayHelper::merge(
 
 Yii::setAlias('@admin', dirname(__DIR__) . '/admin');
 Yii::setAlias('@ua', dirname(__DIR__) . '/system/ua');
+Yii::setAlias('@identity', dirname(__DIR__) . '/system/identity');
 
 $application = new Application($configuration);
 $application->run();
