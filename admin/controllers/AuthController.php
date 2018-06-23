@@ -9,8 +9,8 @@ use Yii;
  * AuthController
  *
  * @author ReSoul <roberts.mark1985@gmail.com>
- * @ver 0.33
- * @since 0.1
+ * @ver 0.56
+ * @since 1.0
  */
 class AuthController extends Controller
 {
@@ -20,7 +20,7 @@ class AuthController extends Controller
     {
         $model = new LoginForm;
 
-        if($model->load(Yii::$app->request->post())){
+        if($model->load(Yii::$app->request->post()) && $model->login()){
             return $this->redirect('/admin/main');
         }
         else{
